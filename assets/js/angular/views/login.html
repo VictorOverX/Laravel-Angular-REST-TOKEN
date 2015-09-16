@@ -1,0 +1,19 @@
+ <div class="container"> 		
+	<form ng-submit="login()" class="form-signin">
+		<div class="alert alert-danger" ng-show="error.valid">
+	 		<strong>Ops!</strong> {{ error.message }}
+	 	</div>
+
+		<h2 class="form-signin-heading">Acessar o sistema</h2>
+		<label for="inputEmail" class="sr-only">Email address</label>
+		<input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus ng-model="email">
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Sua senha" required ng-model="password">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="remember-me"> Lembrar de mim
+			</label>
+		</div>
+		<button ng-click="login()" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+	</form>
+</div>
